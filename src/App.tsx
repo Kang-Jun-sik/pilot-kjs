@@ -1,11 +1,10 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
-// const API_KEY = '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' //황인재
-const API_KEY = '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' //강준식
+const API_KEY = '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'
 
 function App() {
   const [text, setText] = useState<string>('response: ');
-  const [content, setContent] = useState<string>('시그니처 암보험의 주계약에 대해 설명해줘.');
+  const [content, setContent] = useState<string>('IT운영팀 구성원에 대해 알려줘');
 
   /**
    * 분석 요청할 데이터
@@ -22,22 +21,20 @@ function App() {
     {
       role: 'system',
       content: `
-    물어보는 것을 아래 내용을 통해서만 답해주세요.
+    아래는 IT운영팀 구성원 정보입니다. 물어보는 것을 아래 내용을 통해서만 답해주세요.
     
 [
   {
-    "상품명:": "한화생명 시그니처 암보험 2.0(갱신형) 무배당(30년만기) 일반플랜형",
-    "계약일자" : "2022년11월01일",
-    "주계약": "암수술자금",
-    "가입금액(천원)" : "5,000",
-    "보험료(원)": "2,650",
-    "납입기간": "30년납",
-    "보험기간" : "30년",
-    "특약부가내용" : "특정암보험료납입면제Ⅲ(갱)(T)",
-    "가입금액(천원)": "9",
-    "보험료(원)" : 575,
-    "납입기간": "20년납",
-    "보험기간": "20년"
+    "성명:" : "신명철",
+    "세부직무:" : "IT기획",
+  },
+  {
+    "성명:" : "김창완",
+    "세부직무:" : "서비스기획",
+  },
+  {
+    "성명:" : "강준식",
+    "세부직무:" : "프론트개발자",
   }
 ]
     `
