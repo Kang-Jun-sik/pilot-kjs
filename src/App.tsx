@@ -1,8 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-const API_KEY = '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' //강준식
-
-
 function App() {
   const [text, setText] = useState<string>('response: ');
   const [content, setContent] = useState<string>('A(상황 별 화법), B(고객 보장 분석), C(상품 정보) 3개의 데이터를 분석하고 조합해서 고객에게 좋은 보험 상품을 추천하기 위한 설득력 있는 가장 적절한 초 개인화 된 구체적인 숫자와 금액을 예로 들어 최대한 긴 화법을 생성해 주세요.');
@@ -103,7 +100,7 @@ function App() {
         mode: 'cors',
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${API_KEY}`,
+          Authorization: `Bearer ${process.env.REACT_APP_GPT_POC_KEY}`,
         },
         body: JSON.stringify({
           model: 'gpt-3.5-turbo', // GPT 모델. 'gpt-4'는 따로 신청해야 함
