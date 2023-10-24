@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-const API_KEY = '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' //강준식
+const API_KEY = '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' //강준식
+
 
 function App() {
   const [text, setText] = useState<string>('response: ');
@@ -135,7 +136,7 @@ function App() {
               // char 단위로 state에 삽입
               const content = JSON.parse(decoded).choices[0].delta.content;
               if (content) {
-                setText((prev) => prev + content)
+                setText((prev) => prev + content);
               }
             } catch (e) { }
           });
