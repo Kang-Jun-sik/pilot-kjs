@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-const API_KEY = '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' //강준식
+const API_KEY = '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' //강준식
 
 
 function App() {
